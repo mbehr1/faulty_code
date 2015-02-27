@@ -4,6 +4,12 @@ cmake_minimum_required(VERSION 2.8.0 FATAL_ERROR)
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/modules")
 
+# get git sha1 as additional version:
+include(GetGitRevisionDescription)
+get_git_head_revision(GIT_REFSPEC GIT_SHA1)
+git_describe(GIT_SHALONG --always --abbrev=10 --long --all --dirty )
+git_get_last_commit_date(GIT_LAST_COMMIT_DATE )
+
 message("Compiling for target '${TARGET}'")
 
 include( ConfigureMacro )
