@@ -7,7 +7,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 configure_file("${CMAKE_SOURCE_DIR}/src/gitSha1.cpp.in" "${CMAKE_BINARY_DIR}/gitSha1.cpp" @ONLY)
 
 set(faulty_code_srcs
-  main.cpp gitSha1.h macros.h
+  main.cpp gitSha1.h macros.h classes.h
   ${CMAKE_BINARY_DIR}/gitSha1.cpp
 )
 
