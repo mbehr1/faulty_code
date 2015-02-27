@@ -11,16 +11,26 @@
 /*
  * todo list:
  *
- * + macros
- * + strncpy
- * + constructor / virtual functions
- * - race conds
- * - pthread cancel
- * - time complexity
+ * + ex1: macros
+ * + ex2: strncpy
+ * - strdup/free
+ * + ex3: constructor / virtual functions
+ * + missing copy constructor/assignment op. and ref. counts
  * - recursion
  * - std::list erase / iterator invalid
- * - watchdog
+ * - race conds
+ * - pthread cancel async
+ * - pthread cancel and semaphores
+ * - time complexity (O(n^2), qsort,...)
+ * - watchdog / max. response time
  * - wrong sequences
+ * - locks and thread prios / priority inversion
+ * - wrong cache
+ * - "on change only" (if (a!=b))
+ * - missing filesystems/interfaces at startup
+ * - no more filehandles
+ * - too much memory / too big alloc.
+ *
  *
 */
 
