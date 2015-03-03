@@ -8,7 +8,7 @@ env:
 global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
    #   via the "travis encrypt" command using the project repo's public key
-   - secure: "ZYVHocWX2muKKRlublR38u8/fU/J+eB7X5dvdTj9WNKrl42RJy11VVaGxrv9SdAyOqYRc1BLq+uCmyCtW40EoNZ4yZ96JndIIT7qvvFnKk4LH7XOOopPcIvxDwjiUnRA7SeertT9tHp7atdxJr/P/xPi8AsSppeNskFb+q2aA0A="
+   - secure: "Wr0gQ1pO0fGEaNputmL0W4Nl4FKwTRlonqPdNIBWsD2kWaRDrgpbkWKcpdcOFL8E9/DjW35bxLZR7y3C/JBe2yAm8HUc4t4Px2JIOCFlCIC4UyQSftbV3uZLBq6kmP6/gokVBmMXFKEfuRsMEQ6joWJb15T1fRQQ43fgO+1PUVE="
    - CTEST_OUTPUT_ON_FAILURE=1
 
 addons:
@@ -17,7 +17,7 @@ addons:
       name: "mbehr1/faulty_code"
       description: "Build submitted via Travis CI"
     notification_email: mbehr@mcbehr.de
-    build_command_prepend: "" # ./configure; make clean
+    build_command_prepend: ""
     build_command:   "make -j 4"
     branch_pattern: coverity_scan
 
