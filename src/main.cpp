@@ -94,7 +94,7 @@ void example2()
 	char str2[]="0xdeadbeef";
 
 	strncpy(str1, str2, sizeof(str1));
-	printf("strlen(str1)=%d, str1=%s\n", strlen(str1), str1);
+	printf("strlen(str1)=%zu, str1=%s\n", strlen(str1), str1);
 }
 
 // example 3:
@@ -112,7 +112,7 @@ void ex4(){
 	char *test = new char[10];
 	char *test2 = strndup(test, 10);
 	if (strlen(test2)) {
-		printf("strlen(test2)=%d\n", strlen(test2));
+		printf("strlen(test2)=%zu\n", strlen(test2));
 		free(test2);
 	}
 	delete [] test;
@@ -184,7 +184,7 @@ void ex10()
 	cache.add("test1");
 	cache.add("test1");
 	cache.add(std::string("test1"));
-	printf("cache.size()=%d\n", cache.size());
+	printf("cache.size()=%zu\n", cache.size());
 	assert(cache.in_cache("test1"));
 	std::string s1("test");
 	s1.append("1");
