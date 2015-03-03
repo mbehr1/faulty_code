@@ -7,6 +7,21 @@ compiler:
 env:
   - CTEST_OUTPUT_ON_FAILURE=1
 
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "ZYVHocWX2muKKRlublR38u8/fU/J+eB7X5dvdTj9WNKrl42RJy11VVaGxrv9SdAyOqYRc1BLq+uCmyCtW40EoNZ4yZ96JndIIT7qvvFnKk4LH7XOOopPcIvxDwjiUnRA7SeertT9tHp7atdxJr/P/xPi8AsSppeNskFb+q2aA0A="
+
+addons:
+  coverity_scan:
+    project:
+      name: "mbehr1/faulty_code"
+      description: "Build submitted via Travis CI"
+    notification_email: mbehr@mcbehr.de
+    build_command_prepend: "./configure; make clean"
+    build_command:   "make -j 4"
+    branch_pattern: coverity_scan
+
 before_install:
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-get update -qq
