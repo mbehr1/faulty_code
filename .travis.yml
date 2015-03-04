@@ -11,7 +11,6 @@ addons:
   coverity_scan:
     project:
       name: "mbehr1/faulty_code"
-      description: "Build submitted via Travis CI"
     notification_email: mbehr@mcbehr.de
     build_command_prepend: ""
     build_command:   "make"
